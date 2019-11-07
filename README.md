@@ -15,6 +15,11 @@ p5.pathRecorder offers various methods to interact, recall, store, and save path
 [github pages](https://bmoren.github.io/p5.pathRecorder/examples/3d.html)  
 [p5 web editor](http://)   
 
+##### multiple animations simultaneously
+
+##### random animations from a bank of saved animations
+
+
 ## Table of Contents
 ##### Core
   + [p5pathRecorder class](#p5pathRecorder)

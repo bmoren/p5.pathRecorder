@@ -11,16 +11,15 @@ function setup() {
   recorder = new p5pathRecorder(); //instantiate a new path recorder
   // recorder.load('myPaths.json') //load some existing paths from a file
   // console.log(recorder.buffer) //see the paths buffer
+  // recorder.speed = 0.5 //change the playback speed
 
 }
 
 function draw() {
   background(0);
 
-    recorder.speed = 0.5 //change the playback speed
 
     let pos = recorder.play() //play back the recording
-
     // console.log(pos)
 
 
@@ -33,11 +32,12 @@ function draw() {
     zDepth = 0
     //dont draw the box while recording.
     push()
-    translate(-height/2,-width/2) //since we're using mouseX/Y we need to change coordinates to match.
-    translate(pos.x,pos.y,pos.z)
-    r++
-    rotateX(r)
-    box(100,100,100)
+      translate(-height/2,-width/2) //since we're using mouseX/Y we need to change coordinates to match.
+      translate(pos.x,pos.y,pos.z) //move based on the buffer
+      r++
+      rotateX(r) // rotate the box
+      stroke(255,0,0)
+      box(100,100,100)
     pop()
   }
 
