@@ -44,11 +44,13 @@ function draw() {
     pop()
   }
 
-  push()
-    translate(-height/2,-width/2) //since we're using mouseX/Y we need to change coordinates to match.
-    stroke(255)
-    recorder.showPaths(); //show the path of the recording using points
-  pop()
+  if(pathToggle){
+    push()
+      translate(-height/2,-width/2) //since we're using mouseX/Y we need to change coordinates to match.
+      stroke(255)
+      recorder.showPaths(); //show the path of the recording using points
+    pop()
+  }
 }
 
 
