@@ -18,6 +18,7 @@ This library is very happy when used with gestural inputs such as mouse position
 
 
 ![p5.pathRecorder capability as an animation: drawings by Sara Fowler](birds.gif)
+
 Drawings by [Sara Fowler](http://saradellefowler.com)
 
 
