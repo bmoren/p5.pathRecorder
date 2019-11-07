@@ -1,4 +1,4 @@
-class p5pathrecorder {
+class p5pathRecorder {
   constructor() {
     this.buffer = []
     this.speed = 1
@@ -69,10 +69,15 @@ class p5pathrecorder {
       })
   }
 
-  play(survey) {
-    
+  startLocation(location){
+    this.survey = location
+  }
+
+
+  play() {
+
     this.survey += this.speed
-    
+
     //play from the interal buffer if there is something there.
     if (this.buffer != undefined && this.buffer.length > 0) {
       return this.buffer[floor(this.survey % this.buffer.length)]
@@ -82,7 +87,7 @@ class p5pathrecorder {
     }
 
   }
-  
+
   showPaths(){
     for(let i = 0 ; i < this.buffer.length; i ++){
       point(this.buffer[i].x,this.buffer[i].y,this.buffer[i].z)
@@ -91,4 +96,4 @@ class p5pathrecorder {
 
 
 
-}
+} // close the class
