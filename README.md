@@ -16,20 +16,20 @@ p5 path recorder is a call which contains data of an animation path. there are v
 ## Table of Contents
 ##### Core
   + [p5pathRecorder class](#p5pathRecorder)
-  + [.recordFrame()](#.recordFrame)
-  + [.play()](#.play)
+  + [.recordFrame()](#recordFrame)
+  + [.play()](#play)
 
 
 ##### Utility
-  + [.buffer](#.buffer)
-  + [.speed](#.speed)
-  + [.clear()](#.clear)
-  + [.startLocation()](#.startLocation)
-  + [.showPaths()](#.showPaths)
+  + [.buffer](#buffer)
+  + [.speed](#speed)
+  + [.clear()](#clear)
+  + [.startLocation()](#startLocation)
+  + [.showPaths()](#showPaths)
 
 ##### Save & Recall
-+ [.save()](#.save)
-+ [.load()](#.load)
++ [.save()](#save)
++ [.load()](#load)
 
 
 #### p5pathRecorder class
