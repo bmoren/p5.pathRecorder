@@ -11,7 +11,6 @@ function setup() {
   // recorder.load('myPaths.json') //load some existing paths from a file
   // console.log(recorder.buffer) //see the paths buffer
 
-
 }
 
 function draw() {
@@ -33,14 +32,14 @@ function draw() {
     zDepth = 0
     //dont draw the box while recording.
     push()
-    translate(-height/2,-width/2)
+    translate(-height/2,-width/2) //since we're using mouseX/Y we need to change coordinates to match.
     translate(pos.x,pos.y,pos.z)
     box(100,100,100)
     pop()
   }
 
   push()
-    translate(-height/2,-width/2)
+    translate(-height/2,-width/2) //since we're using mouseX/Y we need to change coordinates to match.
     recorder.showPaths(); //show the path of the recording using points
   pop()
 }
