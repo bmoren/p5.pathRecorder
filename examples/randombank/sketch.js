@@ -45,12 +45,6 @@ function draw() {
 
 
 function keyPressed(){
-  if(key == 'c'){
-    //clear them all!
-    for(let i = 0 ; i < recordings.length; i ++){
-      recordings[i].clear()
-    }
-  }
 
   if(key == 'p'){
     pathToggle = !pathToggle
