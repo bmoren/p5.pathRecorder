@@ -102,8 +102,8 @@ class p5pathRecorder {
 
   //animation ended event handler
   onEnded(cb){
-    if(this.survey % this.buffer.length == 0){
-      cb
+    if(this.survey  % this.buffer.length == 0){
+      cb()
     }
   }
 

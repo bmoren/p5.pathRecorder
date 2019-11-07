@@ -2,6 +2,9 @@ let recordings = [] //store all of the paths!
 
 let pathToggle = true;
 
+let source = 0
+let c = 255
+
 function setup() {
   createCanvas(800, 800);
 
@@ -19,43 +22,25 @@ function draw() {
   background(0);
   stroke(255);
 
+  //check when the current playback is finished and when done choose a new animation path source
+  recordings[source].onEnded(function(){
+      source = floor(random(5))
+      c = color(random(255), random(255), random(255))
+  })
+
+
+  //playback the current source
+  let playhead = recordings[source].play()
+  fill(c)
+  ellipse(playhead.x, playhead.y, 100)
+
+  //handle the path displays
   if(pathToggle){
     for(let i = 0 ; i < recordings.length; i ++){
         recordings[i].showPaths()
     }
   }
 
-  if(keyIsPressed && mouseIsPressed){
-    // console.log(key)
-    if(key == 1 || key == 2 || key == 3 || key == 4 || key == 5){
-
-      // console.log(key-1)
-      recordings[key-1].recordFrame(mouseX,mouseY)
-    }
-  }else{
-    //dont playback while recording paths
-
-
-    let zero = recordings[0].play()
-    let one = recordings[1].play()
-    let two = recordings[2].play()
-    let three = recordings[3].play()
-    let four = recordings[4].play()
-
-    ellipse(zero.x, zero.y, 100)
-    rect(one.x, one.y, 100, 100)
-    ellipse(two.x, two.y, 100, 20)
-    rect(three.x, three.y, 20, 100)
-    ellipse(four.x, four.y, 50)
-
-    // or (only ellipses)
-
-    // for(let i = 0 ; i < recordings.length; i ++){
-    //     let pos = recordings[i].play()
-    //     ellipse(pos.x,pos.y,50)
-    // }
-
-  }
 }
 
 

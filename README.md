@@ -4,6 +4,8 @@
 
 p5.pathRecorder offers various methods to interact, recall, store, and save paths of animation. This library's goal is to make gesture based and irregular animations easier and quicker to develop, use, and replicate. The library is designed to work in both 2d and 3d (WEBGL) modes of [p5.js](http://p5js.org)
 
+This library is very happy when used with gestural inputs such as mouse position, camera tracking, drawing tablets, touch controls, [p5.bots](https://github.com/sarahgp/p5bots) sensor data, etc.
+
 [How to add a library to p5.js](https://p5js.org/libraries/)
 
 ## Interactive examples
@@ -11,7 +13,7 @@ p5.pathRecorder offers various methods to interact, recall, store, and save path
 [2d basics](https://bmoren.github.io/p5.pathRecorder/examples/2dbasic)  
 [3d basics](https://bmoren.github.io/p5.pathRecorder/examples/3dbasic)  
 [multiple paths](https://bmoren.github.io/p5.pathRecorder/examples/multipath)  
-
+[random animations from a bank of saved animations]()
 
 <!-- [github pages](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)   -->
 <!-- [p5 web editor](http://)    -->
@@ -31,8 +33,8 @@ p5.pathRecorder offers various methods to interact, recall, store, and save path
   + [.recordFrame()](#recordFrame)
   + [.play()](#play)
 
-
 ##### Utility
+  + [.onEnded()](#onEnded)  
   + [.buffer](#buffer)
   + [.speed](#speed)
   + [.clear()](#clear)
@@ -74,8 +76,8 @@ function draw(){
 ```
 
 #### .play()
-plays back the buffer and return the value of the current frame. Returns an object with recorded x,y,[z] coordinates from the current location in the internal buffer. returns an object containing 0's if the buffer is not filled
-###### example of returned object: ``{"x":100,"y":100,"z":100}`` or p5.vector if not recalled from JSON.
+plays back the buffer and return the value of the current frame. Returns an object with recorded x,y,[z] coordinates from the current location in the internal buffer. returns an object containing 0's if the buffer is not filled. It's important to only call play() once in the draw function otherwise each additional call will double the speed. Because of this, it's best assigned to a variable and used from that variable throughout the sketch.
+###### example of returned object: ``{"x":100,"y":100,"z":100}`` or p5.vector if recorded live.
 ```javascript
 let recorder;
 
@@ -93,6 +95,27 @@ function draw(){
     //dont draw the ellipse while recording.
     ellipse(pos.x, pos.y, 100, 100)
   }
+}
+```
+
+#### .onEnded()
+###### .onEnded(function(){ //callback })
+fires a callback function when the animation loop has ended
+```javascript
+let recorder; //make a variable for the path recoder class to exist in
+
+function setup() {
+  recorder = new p5pathRecorder(); //instantiate a new path recorder
+  recorder.load('myPaths.json') //load some existing paths from a file
+  // console.log(recorder.buffer) //see the paths buffer
+}
+function draw(){
+  let zero = recorder.play()
+
+  //listen for the end of the animation loop
+  recorder.onEnded(function(){
+    console.log('the animation loop has ended!')
+  })
 }
 ```
 
