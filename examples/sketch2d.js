@@ -6,7 +6,7 @@ let pathToggle = true;
 
 
 function setup() {
-  createCanvas(windowWidth, 800);
+  createCanvas(800, 800);
 
   recorder = new p5pathRecorder(); //instantiate a new path recorder
   recorder.load('myPaths.json') //load some existing paths from a file
