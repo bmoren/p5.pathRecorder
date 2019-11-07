@@ -83,7 +83,7 @@ function setup() {
 
 function draw(){
 
-  let pos = recorder.play() //play back the recording ()
+  let pos = recorder.play() //play back the recording
 
   if(mouseIsPressed){
     recorder.recordFrame(mouseX,mouseY) //record a frame to the buffer
@@ -98,7 +98,7 @@ function draw(){
 ###### .onEnded(function(){ //callback })
 fires a callback function when the animation loop has ended
 ```javascript
-let recorder; //make a variable for the path recoder class to exist in
+let recorder; //make a variable for the path recorder class to exist in
 
 function setup() {
   recorder = new p5pathRecorder(); //instantiate a new path recorder
@@ -106,7 +106,7 @@ function setup() {
   // console.log(recorder.buffer) //see the paths buffer
 }
 function draw(){
-  let zero = recorder.play()
+  let pos = recorder.play()
 
   //listen for the end of the animation loop
   recorder.onEnded(function(){
@@ -161,12 +161,6 @@ function setup() {
   recorder = new p5pathRecorder(); //instantiate a new path recorder
 }
 
-function draw(){
-  if(mouseIsPressed){ //only record then the mouse is being pressed
-    recorder.recordFrame(mouseX, mouseY); // capture this frames mouse position
-  }
-}
-
 function keyPressed(){
   recorder.startLocation(30) //re-start the buffer at the 30th frame
 }
@@ -189,7 +183,9 @@ function draw(){
 Save the paths out to an external JSON file for later recall and archiving.
 ```javascript
 function keyPressed(){
-  recorder.save('myPaths') //save out the paths to an external json file
+  if(key == 's'){
+    recorder.save('myPaths') //save out the paths to an external json file
+  }
 }
 ```
 
@@ -197,7 +193,7 @@ function keyPressed(){
 ###### .load('path/to/data.json')
 Load paths which were previously saved into the internal buffer
 ```javascript
-let recorder; //make a variable for the path recoder class to exist in
+let recorder; //make a variable for the path recorder class to exist in
 
 function setup() {
   recorder = new p5pathRecorder(); //instantiate a new path recorder
