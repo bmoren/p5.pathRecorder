@@ -1,5 +1,3 @@
-//switch to the 2d example in the index.html
-
 let recorder; //make a variable for the path recoder class to exist in
 let zDepth = 0;
 let r = 0;
@@ -14,13 +12,11 @@ function setup() {
   recorder = new p5pathRecorder(); //instantiate a new path recorder
   // recorder.load('myPaths.json') //load some existing paths from a file
   // console.log(recorder.buffer) //see the paths buffer
-  // recorder.speed = 0.5 //change the playback speed
 
 }
 
 function draw() {
   background(0);
-
 
     let pos = recorder.play() //play back the recording
     // console.log(pos)
@@ -53,7 +49,6 @@ function draw() {
   }
 }
 
-
 function keyPressed(){
   if(key == 'c'){
     //clear
@@ -67,6 +62,5 @@ function keyPressed(){
   if(key == 'p'){
     pathToggle = !pathToggle
   }
-
 
 }

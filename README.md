@@ -8,8 +8,10 @@ p5.pathRecorder offers various methods to interact, recall, store, and save path
 
 ## Interactive examples
 <!-- ##### 2d coordinate example    -->
-[2d coordinate example](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)  
-[3d coordinate example](https://bmoren.github.io/p5.pathRecorder/examples/3d.html)  
+[2d basics](https://bmoren.github.io/p5.pathRecorder/examples/2dbasic)  
+[3d basics](https://bmoren.github.io/p5.pathRecorder/examples/3dbasic)  
+[multiple paths](https://bmoren.github.io/p5.pathRecorder/examples/multipath)  
+
 
 <!-- [github pages](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)   -->
 <!-- [p5 web editor](http://)    -->

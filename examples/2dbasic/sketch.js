@@ -1,5 +1,3 @@
-//Swithch to the 3d example in the index.html
-
 let recorder; //make a variable for the path recoder class to exist in
 
 let pathToggle = true;
