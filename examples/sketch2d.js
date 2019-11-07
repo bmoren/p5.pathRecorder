@@ -6,7 +6,7 @@ let pathToggle = true;
 
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, 800);
 
   recorder = new p5pathRecorder(); //instantiate a new path recorder
   recorder.load('myPaths.json') //load some existing paths from a file
@@ -47,7 +47,7 @@ function keyPressed(){
   if(key == 's'){
     recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
   }
-  
+
   if(key == 'p'){
     pathToggle = !pathToggle
   }

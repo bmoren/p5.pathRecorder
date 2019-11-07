@@ -5,7 +5,7 @@ let zDepth = 0;
 let r = 0;
 
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(windowWidth, 800, WEBGL);
   angleMode(DEGREES);
 
   recorder = new p5pathRecorder(); //instantiate a new path recorder
