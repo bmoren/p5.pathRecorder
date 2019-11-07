@@ -13,7 +13,7 @@ This library is very happy when used with gestural inputs such as mouse position
 [2d basics](https://bmoren.github.io/p5.pathRecorder/examples/2dbasic)  
 [3d basics](https://bmoren.github.io/p5.pathRecorder/examples/3dbasic)  
 [multiple paths](https://bmoren.github.io/p5.pathRecorder/examples/multipath)  
-[random animations from a bank of saved animations]()
+[random animations from a bank of saved animations](https://bmoren.github.io/p5.pathRecorder/examples/randombank)
 
 <!-- [github pages](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)   -->
 <!-- [p5 web editor](http://)    -->
