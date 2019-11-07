@@ -3,4 +3,7 @@ canvas {
   display: block;
 }
 
-p{width: 30vw;}
+p{
+  width: 30vw;
+  font-family: monospace;
+}

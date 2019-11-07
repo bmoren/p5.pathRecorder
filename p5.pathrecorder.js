@@ -5,6 +5,7 @@ class p5pathRecorder {
     this.survey = 0;
   }
 
+  //record a frame of animation to the internal buffer
   recordFrame(x, y, z) {
 
     if (typeof z === "undefined") {
@@ -14,6 +15,7 @@ class p5pathRecorder {
     }
   }
 
+  //save out the paths as json
   save(filename) {
 
     //save out the path to a JS file
@@ -58,22 +60,25 @@ class p5pathRecorder {
 
   }
 
-
+  //clear the interal buffer
   clear() {
     this.buffer = []
   }
 
+  //load a set of paths into the buffer from external file
   load(filepath) {
       let json = loadJSON(filepath, (data)=>{
         this.buffer = data
       })
   }
 
+  //reset the start location
   startLocation(location){
     this.survey = location
   }
 
 
+  //play back the animation buffer
   play() {
 
     this.survey += this.speed
@@ -88,9 +93,17 @@ class p5pathRecorder {
 
   }
 
+  // show the paths for debugging
   showPaths(){
     for(let i = 0 ; i < this.buffer.length; i ++){
       point(this.buffer[i].x,this.buffer[i].y,this.buffer[i].z)
+    }
+  }
+
+  //animation ended event handler
+  onEnded(cb){
+    if(this.survey % this.buffer.length == 0){
+      cb
     }
   }
 
