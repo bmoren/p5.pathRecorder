@@ -5,3 +5,5 @@ html, body {
 canvas {
   display: block;
 }
+
+p{width: 30vw;}

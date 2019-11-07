@@ -13,7 +13,8 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(0);
+  stroke(255);
 
     // recorder.speed = 0.5 //change the playback speed
 
