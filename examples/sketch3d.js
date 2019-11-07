@@ -1,11 +1,12 @@
 //switch to the 2d example in the index.html
 
 let recorder; //make a variable for the path recoder class to exist in
-
 let zDepth = 0;
+let r = 0;
 
 function setup() {
   createCanvas(400, 400, WEBGL);
+  angleMode(DEGREES);
 
   recorder = new p5pathRecorder(); //instantiate a new path recorder
   // recorder.load('myPaths.json') //load some existing paths from a file
@@ -34,6 +35,8 @@ function draw() {
     push()
     translate(-height/2,-width/2) //since we're using mouseX/Y we need to change coordinates to match.
     translate(pos.x,pos.y,pos.z)
+    r++
+    rotateX(r)
     box(100,100,100)
     pop()
   }
@@ -47,8 +50,7 @@ function draw() {
 
 
 function keyPressed(){
-
-  recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
-
-
+  if(key == 's'){
+      recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
+  }
 }
