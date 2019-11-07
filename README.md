@@ -2,7 +2,7 @@
 ![p5.pathRecorder](p5.pathRecorder.png)
 #### record, save, and recall animation paths for your p5.js sketches!
 
-p5.pathRecorder offers various methods to interact, recall, store, and save paths of animation. This library is meant to speed up animations and make simple non-mathematical animations easier to use, quickly develop, and replicate. The library is designed to work in both 2d and 3d (WEBGL) modes of p5.js
+p5.pathRecorder offers various methods to interact, recall, store, and save paths of animation. This library's goal is to make gesture based and irregular animations easier and quicker to develop, use, and replicate. The library is designed to work in both 2d and 3d (WEBGL) modes of [p5.js](http://p5js.org)
 
 [How to add a library to p5.js](https://p5js.org/libraries/)
 
