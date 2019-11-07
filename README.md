@@ -26,6 +26,8 @@ This library is very happy when used with gestural inputs such as mouse position
 
 <!-- ##### random animations from a bank of saved animations -->
 
+![p5.pathRecorder](p5.pathRecorder.gif)
+
 
 ## Table of Contents
 ##### Core
