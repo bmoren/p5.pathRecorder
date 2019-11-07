@@ -2,6 +2,8 @@
 
 let recorder; //make a variable for the path recoder class to exist in
 
+let pathToggle = true;
+
 
 function setup() {
   createCanvas(400, 400);
@@ -30,8 +32,9 @@ function draw() {
     ellipse(pos.x, pos.y, 100, 100)
   }
 
-  recorder.showPaths(); //show the path of the recording using points
-
+  if(pathToggle){
+    recorder.showPaths(); //show the path of the recording using points
+  }
 }
 
 
@@ -43,7 +46,10 @@ function keyPressed(){
 
   if(key == 's'){
     recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
-
+  }
+  
+  if(key == 'p'){
+    pathToggle = !pathToggle
   }
 
 
