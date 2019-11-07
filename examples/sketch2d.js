@@ -35,8 +35,15 @@ function draw() {
 
 
 function keyPressed(){
+  if(key == 'c'){
+    //clear
+    recorder.clear()
+  }
 
-  recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
+  if(key == 's'){
+    recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
+
+  }
 
 
 }
