@@ -1,3 +1,6 @@
+// Ben Moren 2019
+// GNU GPL 3.0
+
 class p5pathRecorder {
   constructor() {
     this.buffer = []
