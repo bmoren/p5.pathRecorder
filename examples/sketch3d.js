@@ -4,6 +4,9 @@ let recorder; //make a variable for the path recoder class to exist in
 let zDepth = 0;
 let r = 0;
 
+let pathToggle = true;
+
+
 function setup() {
   createCanvas(800, 800, WEBGL);
   angleMode(DEGREES);
@@ -50,7 +53,18 @@ function draw() {
 
 
 function keyPressed(){
-  if(key == 's'){
-      recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
+  if(key == 'c'){
+    //clear
+    recorder.clear()
   }
+
+  if(key == 's'){
+    recorder.save('myPaths') //save out the paths (you'll need to import them back into the editor and use the load() function to load the json file in the setup or preload
+  }
+
+  if(key == 'p'){
+    pathToggle = !pathToggle
+  }
+
+
 }
