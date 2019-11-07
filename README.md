@@ -7,17 +7,20 @@ p5.pathRecorder offers various methods to interact, recall, store, and save path
 [How to add a library to p5.js](https://p5js.org/libraries/)
 
 ## Interactive examples
-##### 2d coordinate example   
-[github pages](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)  
-[p5 web editor](http://)   
+<!-- ##### 2d coordinate example    -->
+[2d coordinate example](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)  
+[3d coordinate example](https://bmoren.github.io/p5.pathRecorder/examples/3d.html)  
 
-##### 3d coordinate example   
-[github pages](https://bmoren.github.io/p5.pathRecorder/examples/3d.html)  
-[p5 web editor](http://)   
+<!-- [github pages](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)   -->
+<!-- [p5 web editor](http://)    -->
 
-##### multiple animations simultaneously
+<!-- ##### 3d coordinate example    -->
+<!-- [github pages](https://bmoren.github.io/p5.pathRecorder/examples/3d.html)   -->
+<!-- [p5 web editor](http://)    -->
 
-##### random animations from a bank of saved animations
+<!-- ##### multiple animations simultaneously -->
+
+<!-- ##### random animations from a bank of saved animations -->
 
 
 ## Table of Contents
