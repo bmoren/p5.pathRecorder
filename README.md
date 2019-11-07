@@ -2,15 +2,17 @@
 ![p5.pathRecorder](p5.pathRecorder.png)
 #### record, save, and recall animation paths for your p5.js sketches!
 
-p5 path recorder is a call which contains data of an animation path. there are various methods to interact, recall, store, and save paths. This library is meant to speed up animations and make simple non-mathematical animations easier to use and replicate. The library is designed to work in both 2d and 3d (WEBGL) modes of p5.js
+p5.pathRecorder offers various methods to interact, recall, store, and save paths of animation. This library is meant to speed up animations and make simple non-mathematical animations easier to use, quickly develop, and replicate. The library is designed to work in both 2d and 3d (WEBGL) modes of p5.js
 
-## examples
+[How to add a library to p5.js](https://p5js.org/libraries/)
+
+## Interactive examples
 ##### 2d coordinate example   
-[github pages](http://)  
+[github pages](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)  
 [p5 web editor](http://)   
 
 ##### 3d coordinate example   
-[github pages](http://)  
+[github pages](https://bmoren.github.io/p5.pathRecorder/examples/3d.html)  
 [p5 web editor](http://)   
 
 ## Table of Contents
@@ -31,6 +33,8 @@ p5 path recorder is a call which contains data of an animation path. there are v
 + [.save()](#save)
 + [.load()](#load)
 
+---
+## Reference
 
 #### p5pathRecorder class
 ###### p5pathRecorder()
