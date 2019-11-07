@@ -50,5 +50,9 @@ function keyPressed(){
     pathToggle = !pathToggle
   }
 
+  if(key == 'r'){
+    recorder.startLocation(0)
+  }
+
 
 }
