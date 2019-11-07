@@ -1,4 +1,6 @@
-
+body,html{
+ /* padding:100px; */
+}
 canvas {
   display: block;
 }

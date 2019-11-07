@@ -10,26 +10,18 @@ This library is very happy when used with gestural inputs such as mouse position
 
 ## Interactive examples
 <!-- ##### 2d coordinate example    -->
-[2d basics](https://bmoren.github.io/p5.pathRecorder/examples/2dbasic)  
-[3d basics](https://bmoren.github.io/p5.pathRecorder/examples/3dbasic)  
-[multiple paths](https://bmoren.github.io/p5.pathRecorder/examples/multipath)  
-[random animations from a bank of saved animations](https://bmoren.github.io/p5.pathRecorder/examples/randombank)
++ [2d basics](https://bmoren.github.io/p5.pathRecorder/examples/2dbasic)  
++ [3d basics](https://bmoren.github.io/p5.pathRecorder/examples/3dbasic)  
++ [multiple paths](https://bmoren.github.io/p5.pathRecorder/examples/multipath)  
++ [random animations from a bank of saved animations](https://bmoren.github.io/p5.pathRecorder/examples/randombank)
++ [building a scene of animation with images](https://bmoren.github.io/p5.pathRecorder/examples/imagescene)
 
-<!-- [github pages](https://bmoren.github.io/p5.pathRecorder/examples/2d.html)   -->
-<!-- [p5 web editor](http://)    -->
+![p5.pathRecorder capability as an animation](birds.gif)
 
-<!-- ##### 3d coordinate example    -->
-<!-- [github pages](https://bmoren.github.io/p5.pathRecorder/examples/3d.html)   -->
-<!-- [p5 web editor](http://)    -->
+---
+## Reference
 
-<!-- ##### multiple animations simultaneously -->
-
-<!-- ##### random animations from a bank of saved animations -->
-
-![p5.pathRecorder](p5.pathRecorder.gif)
-
-
-## Table of Contents
+#### Table of Contents
 ##### Core
   + [p5pathRecorder class](#p5pathRecorder)
   + [.recordFrame()](#recordFrame)
@@ -48,7 +40,6 @@ This library is very happy when used with gestural inputs such as mouse position
 + [.load()](#load)
 
 ---
-## Reference
 
 #### p5pathRecorder class
 ###### p5pathRecorder()
