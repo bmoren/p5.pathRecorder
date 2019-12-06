@@ -6,6 +6,7 @@ class p5pathRecorder {
     this.buffer = []
     this.speed = 1
     this.survey = 0;
+    this.direction = 1;
   }
 
   //record a frame of animation to the internal buffer
@@ -69,26 +70,64 @@ class p5pathRecorder {
   }
 
   //load a set of paths into the buffer from external file
+
   load(filepath) {
       let json = loadJSON(filepath, (data)=>{
-        this.buffer = data
+        // this.buffer = data   //convert this to p5 vectors before adding to the buffer
+
+        for(let point of data){
+          let p = createVector(point.x,point.y,point.z)
+          this.buffer.push(p)
+        }
+
       })
   }
 
   //reset the start location
   startLocation(location){
-    this.survey = location
+
+    //constrain this to 0, the length of the buffer
+    this.survey = constrain(location,0,this.buffer.length-1)
+
   }
 
 
   //play back the animation buffer
-  play() {
+  play(direction) {
 
-    this.survey += this.speed
+    //increment the survey!
+    this.survey += this.speed * this.direction
 
-    //play from the interal buffer if there is something there.
+
     if (this.buffer != undefined && this.buffer.length > 0) {
-      return this.buffer[floor(this.survey % this.buffer.length)]
+      //play from the interal buffer if there is something there.
+
+      if(direction === 'forward' || typeof direction === "undefined"){
+        this.direction = 1;
+
+        if(this.survey >= this.buffer.length-1){
+          this.survey = 0;
+        } //reset
+
+      }else if(direction === 'reverse'){
+        this.direction = -1
+
+        if(this.survey <= 0){
+          this.survey = this.buffer.length-1;
+        } //reset
+
+      }else if(direction === "alternate"){
+
+        if(this.survey <= 0 || this.survey >= this.buffer.length-1){
+          this.direction = -this.direction //flip the direction
+        }
+
+      }
+
+      //this needs to be constrained to account for fast playback speeds
+      return this.buffer[constrain(floor(this.survey),0,this.buffer.length-1)]
+
+
     }else{
       let zeroObject = {"x":0,"y":0,"z":0}
       return zeroObject
@@ -105,7 +144,7 @@ class p5pathRecorder {
 
   //animation ended event handler
   onEnded(cb){
-    if(this.survey  % this.buffer.length == 0){
+    if(this.survey  % this.buffer.length === 0){
       cb()
     }
   }

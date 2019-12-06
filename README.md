@@ -15,6 +15,7 @@ This library is very happy when used with gestural inputs such as mouse position
 + [multiple paths](https://bmoren.github.io/p5.pathRecorder/examples/multipath)  
 + [random animations from a bank of saved animations](https://bmoren.github.io/p5.pathRecorder/examples/randombank)
 + [building a scene of animation with images](https://bmoren.github.io/p5.pathRecorder/examples/imagescene)
++ [playback modes & speed](https://bmoren.github.io/p5.pathRecorder/examples/playback_modes)
 
 
 ![p5.pathRecorder capability as an animation: drawings by Sara Fowler](birds.gif)     
@@ -71,9 +72,17 @@ function draw(){
 }
 ```
 
-#### .play()
-plays back the buffer and return the value of the current frame. Returns an object with recorded x,y,[z] coordinates from the current location in the internal buffer. returns an object containing 0's if the buffer is not filled. It's important to only call play() once in the draw function otherwise each additional call will double the speed. Because of this, it's best assigned to a variable and used from that variable throughout the sketch.
+#### .play([mode])
+plays back the buffer and return the value of the current frame. Returns an object with recorded x,y,[z] coordinates from the current location in the internal buffer. returns an object containing 0's if the buffer is not filled. It's important to only call play() once in the draw function otherwise each additional call will double the speed. Because of this, it's best assigned to a variable and used from that variable throughout the sketch. play() takes an optional string to define the playback mode. The default is `forward` if no string is passed into play().
+
+
+##### playback modes
+`forward` : plays back through the buffer forwards, as it was recorded (default)
+`reverse` : plays back through the buffer in reverse, backwards from how it was recorded
+`alternate` : alternates the playback in a palindrome fashion. Bounces back and forth between forward and reverse in a back-to-back infinite loop.
+
 ###### example of returned object: ``{"x":100,"y":100,"z":100}`` or p5.vector if recorded live.
+
 ```javascript
 let recorder;
 
@@ -84,6 +93,7 @@ function setup() {
 function draw(){
 
   let pos = recorder.play() //play back the recording
+  // let pos = recorder.play('alternate') //play recording in alternating mode!
 
   if(mouseIsPressed){
     recorder.recordFrame(mouseX,mouseY) //record a frame to the buffer
