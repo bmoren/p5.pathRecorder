@@ -77,9 +77,9 @@ plays back the buffer and return the value of the current frame. Returns an obje
 
 
 ##### playback modes
-`forward` : plays back through the buffer forwards, as it was recorded (default)
-`reverse` : plays back through the buffer in reverse, backwards from how it was recorded
-`alternate` : alternates the playback in a palindrome fashion. Bounces back and forth between forward and reverse in a back-to-back infinite loop.
+`forward` : plays back through the buffer forwards, as it was recorded (default).\
+`reverse` : plays back through the buffer in reverse, backwards from how it was recorded.\
+`alternate` : alternates the playback in a palindrome fashion. Bounces back and forth between forward and reverse in a back-to-back infinite loop.  
 
 ###### example of returned object: ``{"x":100,"y":100,"z":100}`` or p5.vector if recorded live.
 
