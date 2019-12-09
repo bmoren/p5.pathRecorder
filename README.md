@@ -73,7 +73,7 @@ function draw(){
 ```
 
 #### .play([mode])
-plays back the buffer and return the value of the current frame. Returns an object with recorded x,y,[z] coordinates from the current location in the internal buffer. returns an object containing 0's if the buffer is not filled. It's important to only call play() once in the draw function otherwise each additional call will double the speed. Because of this, it's best assigned to a variable and used from that variable throughout the sketch. play() takes an optional string to define the playback mode. The default is `forward` if no string is passed into play().
+plays back the buffer and return the value of the current frame. Returns an [p5vector](https://p5js.org/reference/#/p5.Vector) object with recorded x,y,[z] coordinates from the current location in the internal buffer. Returns an object containing x,y,z keys with values of 0 if the buffer is not filled. It's important to only call play() once in the draw function otherwise each additional call will double the speed. Because of this, it's best assigned to a variable and used from that variable throughout the sketch. play() takes an optional string to define the playback mode. The default is `forward` if no string is passed into play().
 
 
 ##### playback modes
@@ -81,7 +81,6 @@ plays back the buffer and return the value of the current frame. Returns an obje
 `reverse` : plays back through the buffer in reverse, backwards from how it was recorded.\
 `alternate` : alternates the playback in a palindrome fashion. Bounces back and forth between forward and reverse in a back-to-back infinite loop.  
 
-###### example of returned object: ``{"x":100,"y":100,"z":100}`` or p5.vector if recorded live.
 
 ```javascript
 let recorder;
